@@ -1,0 +1,54 @@
+/* Resetiranje margina i paddinga */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stilizacija canvas elementa */
+canvas {
+    display: block;
+    background-color: black; /* Crna pozadina za kontrast */
+    border: 2px solid white; /* Vidljivi rub oko canvas-a */
+    width: 790px; /* Fiksna širina */
+    height: 860px; /* Fiksna visina */
+    margin: 0 auto; /* Centriranje na ekranu */
+    position: absolute;
+    top: 50%; /* Centriranje po visini */
+    left: 50%; /* Centriranje po širini */
+    transform: translate(-50%, -50%); /* Savršeno centriranje */
+}
+
+/* Gumb za ponovno pokretanje */
+#restartButton {
+    display: none; /* Prikazuje se tek nakon završetka igre */
+    position: absolute;
+    top: 60%; /* Spustite gumb na 60% visine ekrana */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #ff6347;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Stilizacija gumba kad se prelazi mišem */
+#restartButton:hover {
+    background-color: #ff4500;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Stilizacija gumba kad je pritisnut */
+#restartButton:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Sjenčanje canvas elementa (ako je potrebno) */
+canvas {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
